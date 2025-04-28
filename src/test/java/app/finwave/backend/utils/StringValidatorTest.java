@@ -1,9 +1,8 @@
 package app.finwave.backend.utils;
 
-
 import app.finwave.backend.utils.params.validators.StringValidator;
-import org.junit.jupiter.api.Test;
 
+import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class StringValidatorTest {
@@ -39,7 +38,7 @@ public class StringValidatorTest {
     @Test
     public void test4() {
         // test string that doesn't match raw string
-        StringValidator t4 = new StringValidator("abc123");
+        StringValidator t4 = new StringValidator("abc123", "test");
         assertThrows(IllegalArgumentException.class, () ->t4.matches("abc1233"));
     }
 
